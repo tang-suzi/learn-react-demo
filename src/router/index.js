@@ -11,6 +11,7 @@ import RespondingEvents from "@/components/CreatingAndNestingComponents/respondi
 import UpdatingScreen from "@/components/CreatingAndNestingComponents/updatingScreen";
 import SharingDataBetweenComponents from "@/components/CreatingAndNestingComponents/sharingDataBetweenComponents";
 import TicTacToe from "@/components/TicTacToe";
+import FilterableProductTable from "../components/ThinkingInReact/FilterableProductTable";
 
 const router = createHashRouter([
   {
@@ -32,7 +33,7 @@ const router = createHashRouter([
         Component: Counter,
       },
       {
-        label: "Lesson01",
+        label: "快速入门",
         name: "lesson01",
         path: "/lesson01",
         key: "/lesson01",
@@ -96,7 +97,7 @@ const router = createHashRouter([
         ],
       },
       {
-        label: "Lesson02",
+        label: "井字棋游戏",
         name: "lesson02",
         path: "/lesson02",
         key: "/lesson02",
@@ -107,6 +108,21 @@ const router = createHashRouter([
             path: "/lesson02/ticTacToe",
             key: "/lesson02/ticTacToe",
             Component: TicTacToe,
+          },
+        ],
+      },
+      {
+        label: "react哲学",
+        name: "lesson03",
+        path: "/lesson03",
+        key: "/lesson03",
+        children: [
+          {
+            label: "过滤产品表",
+            name: "filterableProductTable",
+            path: "/lesson03/filterableProductTable",
+            key: "/lesson03/filterableProductTable",
+            Component: FilterableProductTable,
           },
         ],
       },
