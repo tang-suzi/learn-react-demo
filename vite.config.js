@@ -14,5 +14,11 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "src"),
     },
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler"]],
+      },
+    }),
+  ],
 });
