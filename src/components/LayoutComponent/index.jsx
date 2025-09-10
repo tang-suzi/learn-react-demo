@@ -17,16 +17,24 @@ const App = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
-  const items = router.routes[0].children.map((route) => {
-    return {
-      key: route.name,
-      label: route.name,
-      icon: null,
-    };
-  });
+  const items = [...router.routes[0].children];
+  // router.routes[0].children.map((route) => {
+  //   const arr = []
+  //   route.Component && items.push
+  // });
   return (
     <Layout className={styles.layout}>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        style={{
+          overflow: "hidden",
+          overflowY: "auto",
+          scrollbarWidth: "thin",
+          scrollbarGutter: "stable",
+        }}
+      >
         <div className={styles.logoVertical}>
           <h2>logo</h2>
         </div>
@@ -36,8 +44,7 @@ const App = () => {
           defaultSelectedKeys={["1"]}
           items={items}
           onClick={(menu) => {
-            console.log(menu);
-            navigate(`/${menu.key}`);
+            navigate(menu.key);
           }}
         />
       </Sider>
