@@ -1,5 +1,5 @@
 import { createHashRouter } from "react-router";
-import HelloReact from "../pages/HelloReact";
+import HelloReact from "@/pages/HelloReact";
 import LayoutComponent from "@/components/LayoutComponent";
 import Counter from "@//components/Counter";
 import CreateComponent from "@/components/CreatingAndNestingComponents/createComponent";
@@ -8,8 +8,9 @@ import DisplayData from "@/components/CreatingAndNestingComponents/displayData";
 import ConditionalRendering from "@/components/CreatingAndNestingComponents/conditionalRendering";
 import RenderLists from "@/components/CreatingAndNestingComponents/renderLists";
 import RespondingEvents from "@/components/CreatingAndNestingComponents/respondingEvents";
-import UpdatingScreen from "../components/CreatingAndNestingComponents/updatingScreen";
-import SharingDataBetweenComponents from "../components/CreatingAndNestingComponents/sharingDataBetweenComponents";
+import UpdatingScreen from "@/components/CreatingAndNestingComponents/updatingScreen";
+import SharingDataBetweenComponents from "@/components/CreatingAndNestingComponents/sharingDataBetweenComponents";
+import TicTacToe from "@/components/TicTacToe";
 
 const router = createHashRouter([
   {
@@ -91,6 +92,21 @@ const router = createHashRouter([
             path: "/lesson01/sharingDataBetweenComponents",
             key: "/lesson01/sharingDataBetweenComponents",
             Component: SharingDataBetweenComponents,
+          },
+        ],
+      },
+      {
+        label: "Lesson02",
+        name: "lesson02",
+        path: "/lesson02",
+        key: "/lesson02",
+        children: [
+          {
+            label: "井字棋游戏",
+            name: "TicTacToe",
+            path: "/lesson02/ticTacToe",
+            key: "/lesson02/ticTacToe",
+            Component: TicTacToe,
           },
         ],
       },
