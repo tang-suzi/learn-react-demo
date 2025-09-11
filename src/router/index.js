@@ -12,6 +12,15 @@ import UpdatingScreen from "@/components/CreatingAndNestingComponents/updatingSc
 import SharingDataBetweenComponents from "@/components/CreatingAndNestingComponents/sharingDataBetweenComponents";
 import TicTacToe from "@/components/TicTacToe";
 import FilterableProductTable from "../components/ThinkingInReact/FilterableProductTable";
+import YourFirstComponent from "@/components/DescribingTheUI/YourFirstComponent ";
+import ImportingAndExportingComponents from "@/components/DescribingTheUI/ImportingAndExportingComponents";
+import WritingMarkupWithJSX from "@/components/DescribingTheUI/WritingMarkupWithJSX";
+import JavascriptInJSXWithCurlyBraces from "../components/DescribingTheUI/JavaScriptInJSXWithCurlyBraces";
+import PassingPropsToComponent from "../components/PassingPropsToComponent";
+import ConditionalRender from "@/components/ConditionalRender";
+import RenderingLists from "../components/DescribingTheUI/RenderingLists";
+import KeepingComponentsPure from "../components/DescribingTheUI/KeepingComponentsPure";
+import UIAsTree from "../components/DescribingTheUI/UIAsTree";
 
 const router = createHashRouter([
   {
@@ -123,6 +132,77 @@ const router = createHashRouter([
             path: "/lesson03/filterableProductTable",
             key: "/lesson03/filterableProductTable",
             Component: FilterableProductTable,
+          },
+        ],
+      },
+      {
+        label: "描述UI",
+        name: "lesson04",
+        path: "/lesson04",
+        key: "/lesson04",
+        children: [
+          {
+            label: "你的第一个组件",
+            name: "yourFirstComponent",
+            path: "/lesson04/yourFirstComponent",
+            key: "/lesson04/yourFirstComponent",
+            Component: YourFirstComponent,
+          },
+          {
+            label: "组件的导入与导出",
+            name: "importingAndExportingComponents",
+            path: "/lesson04/importingAndExportingComponents",
+            key: "/lesson04/importingAndExportingComponents",
+            Component: ImportingAndExportingComponents,
+          },
+          {
+            label: "使用JSX书写标签语言",
+            name: "writingMarkupWithJSX",
+            path: "/lesson04/writingMarkupWithJSX",
+            key: "/lesson04/writingMarkupWithJSX",
+            Component: WritingMarkupWithJSX,
+          },
+          {
+            label: "在JSX中使用JS",
+            name: "javascriptInJSXWithCurlyBraces",
+            path: "/lesson04/javascriptInJSXWithCurlyBraces",
+            key: "/lesson04/javascriptInJSXWithCurlyBraces",
+            Component: JavascriptInJSXWithCurlyBraces,
+          },
+          {
+            label: "将Props传递给组件",
+            name: "passingPropsToComponent",
+            path: "/lesson04/passingPropsToComponent",
+            key: "/lesson04/passingPropsToComponent",
+            Component: PassingPropsToComponent,
+          },
+          {
+            label: "条件渲染",
+            name: "conditionalRender",
+            path: "/lesson04/conditionalRender",
+            key: "/lesson04/conditionalRender",
+            Component: ConditionalRender,
+          },
+          {
+            label: "渲染列表",
+            name: "renderingLists",
+            path: "/lesson04/renderingLists",
+            key: "/lesson04/renderingLists",
+            Component: RenderingLists,
+          },
+          {
+            label: "保持组件纯粹",
+            name: "keepingComponentsPure",
+            path: "/lesson04/keepingComponentsPure",
+            key: "/lesson04/keepingComponentsPure",
+            Component: KeepingComponentsPure,
+          },
+          {
+            label: "将UI视为树",
+            name: "uiAsTree",
+            path: "/lesson04/uiAsTree",
+            key: "/lesson04/uiAsTree",
+            Component: UIAsTree,
           },
         ],
       },
