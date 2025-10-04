@@ -21,6 +21,7 @@ import ConditionalRender from "@/components/ConditionalRender";
 import RenderingLists from "../components/DescribingTheUI/RenderingLists";
 import KeepingComponentsPure from "../components/DescribingTheUI/KeepingComponentsPure";
 import UIAsTree from "../components/DescribingTheUI/UIAsTree";
+import RespondingToEvents from "../components/AddingInteractivity/RespondingToEvents";
 
 const router = createHashRouter([
   {
@@ -203,6 +204,21 @@ const router = createHashRouter([
             path: "/lesson04/uiAsTree",
             key: "/lesson04/uiAsTree",
             Component: UIAsTree,
+          },
+        ],
+      },
+      {
+        label: "添加交互",
+        name: "lesson05",
+        path: "/lesson05",
+        key: "/lesson05",
+        children: [
+          {
+            label: "响应事件",
+            name: "respondingToEvents",
+            path: "/lesson05/respondingToEvents",
+            key: "/lesson05/respondingToEvents",
+            Component: RespondingToEvents,
           },
         ],
       },

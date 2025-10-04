@@ -14,6 +14,7 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "src"),
     },
   },
+  optimizeDeps: {},
   plugins: [
     react({
       babel: {
@@ -21,4 +22,7 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    sourcemap: true,
+  },
 });
